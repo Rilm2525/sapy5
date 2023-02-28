@@ -1,6 +1,12 @@
 # sapy5
 Makes it easy to use sapi from Python.
 
+#Features
+・Support text2speech.
+・Support export wave.
+・Support get pcm bytestream.
+・Support get wave file stream.
+
 # How to (Speak)
 import sapy5
 <br>
