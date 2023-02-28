@@ -1,20 +1,20 @@
 # sapy5
-Makes it easy to use sapi from Python.
-
+Makes it easy to use sapi from Python.<br>
+<br>
 # Features
-・Support text2speech.
-・Support export wave.
-・Support get pcm bytestream.
-・Support get wave file stream.
-
+・Support text2speech.<br>
+・Support export wave.<br>
+・Support get pcm bytestream.<br>
+・Support get wave file stream.<br>
+<br>
 # How to (Speak)
-import sapy5
+import sapy5<br>
 <br>
-sapi = sapy5.core()
-sapi.speak("This is a test message")
-
-# How to (export wave file)
-from sapy5 import core, audio_formats
+sapi = sapy5.core()<br>
+sapi.speak("This is a test message")<br>
 <br>
-sapi = core(audio_format=audio_formats.pcm_48kHz16BitStereo)
-sapi.export_wave("This is a test message", "test_msg.wav", "wb")
+# How to (Export wave file)
+from sapy5 import core, audio_formats<br>
+<br>
+sapi = core(audio_format=audio_formats.pcm_48kHz16BitStereo)<br>
+sapi.export_wave("This is a test message", "test_msg.wav", "wb")<br>
