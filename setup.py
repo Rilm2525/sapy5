@@ -4,7 +4,7 @@ setup(
     name='sapy5',
     version='0.0.0.1',
     license='MIT',
-    description='It makes it easy to use sapi from Python.',
+    description='Makes it easy to use sapi from Python.',
 
     author='Rilm2525',
     author_email='rilm2525ce@gmail.com',
