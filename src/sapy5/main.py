@@ -137,6 +137,7 @@ class core:
         file.writeframes(data)
         file.close()
         del data, file
+        fs.seek(0)
         return fs
 
     def export_wave(self, text:str, wave_path:str, wave_mode:str="wb") -> None:
