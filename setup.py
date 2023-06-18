@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='sapy5',
-    version='0.0.0.2',
+    version='0.0.1.0',
     license='MIT',
     description='Makes it easy to use sapi from Python.',
     
