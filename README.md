@@ -2,7 +2,9 @@
 Makes it easy to use sapi from Python.<br>
 <br>
 # Install
+```
 pip install git+https://github.com/Rilm2525/sapy5<br>
+```
 <br>
 # Features
 ・Support text2speech.<br>
