@@ -1,9 +1,8 @@
-from enum import Enum
 import win32com.client
 from io import BytesIO
 import wave
 
-class audio_formats(Enum):
+class audio_formats:
     pcm_8kHz8BitMono = {"sapi_format_type": 4, "sampling_rate": 8000, "sample_width_bit": 8, "channels": 1}
     pcm_8kHz8BitStereo = {"sapi_format_type": 5, "sampling_rate": 8000, "sample_width_bit": 8, "channels": 2}
     pcm_8kHz16BitMono = {"sapi_format_type": 6, "sampling_rate": 8000, "sample_width_bit": 16, "channels": 1}
@@ -118,7 +117,7 @@ class core:
     def get_audio_frames(self, text:str) -> bytes:
         sapi = win32com.client.Dispatch("SAPI.SpVoice")
         mem_stream = win32com.client.Dispatch("SAPI.SpMemoryStream")
-        mem_stream.Format.Type = self.__audio_format.value["sapi_format_type"]
+        mem_stream.Format.Type = self.__audio_format["sapi_format_type"]
         sapi.AudioOutputStream = mem_stream
         if not self.__voice == None:
             sapi.Voice = self.__voice
@@ -131,9 +130,9 @@ class core:
         data = self.get_audio_frames(text)
         fs = BytesIO()
         file = wave.open(fs, "wb")
-        file.setnchannels(self.__audio_format.value["channels"])
-        file.setsampwidth(self.__audio_format.value["sample_width_bit"]//8)
-        file.setframerate(self.__audio_format.value["sampling_rate"])
+        file.setnchannels(self.__audio_format["channels"])
+        file.setsampwidth(self.__audio_format["sample_width_bit"]//8)
+        file.setframerate(self.__audio_format["sampling_rate"])
         file.writeframes(data)
         file.close()
         del data, file
@@ -143,9 +142,9 @@ class core:
     def export_wave(self, text:str, wave_path:str, wave_mode:str="wb") -> None:
         data = self.get_audio_frames(text)
         file = wave.open(wave_path, wave_mode)
-        file.setnchannels(self.__audio_format.value["channels"])
-        file.setsampwidth(self.__audio_format.value["sample_width_bit"]//8)
-        file.setframerate(self.__audio_format.value["sampling_rate"])
+        file.setnchannels(self.__audio_format["channels"])
+        file.setsampwidth(self.__audio_format["sample_width_bit"]//8)
+        file.setframerate(self.__audio_format["sampling_rate"])
         file.writeframes(data)
         file.close()
         del data, file
