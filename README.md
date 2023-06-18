@@ -6,10 +6,10 @@ Makes it easy to use sapi from Python.<br>
 pip install git+https://github.com/Rilm2525/sapy5
 ```
 # Features
-・Support text2speech.<br>
+・Support text2speech. (No disk access)<br>
 ・Support export wave.<br>
-・Support get pcm bytestream.<br>
-・Support get wave file stream.<br>
+・Support get pcm bytestream. (No disk access)<br>
+・Support get wave file stream. (No disk access)<br>
 <br>
 # How to (Speak)
 ```Python
