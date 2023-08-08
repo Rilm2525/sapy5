@@ -95,7 +95,7 @@ class core:
         voices = sapi.GetVoices()
         voices_dict = {}
         for voice in voices:
-            voices_dict[voice.Id] = voice
+            voices_dict[voice.GetDescription()] = voice
         return voices_dict
     
     def search_voice(self, search_key:str):
