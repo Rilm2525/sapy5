@@ -9,9 +9,9 @@ Easily use SAPI (Speech Application Programming Interface) from Python.<br>
 ・Output a WAV file from the input text<br>
 <br>
 
-# Installation (requires git)
+# Installation
 ```sh
-pip install git+https://github.com/Rilm2525/sapy5
+pip install sapy5
 ```
 <br>
 
