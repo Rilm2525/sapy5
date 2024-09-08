@@ -9,9 +9,9 @@ Easily use SAPI (Speech Application Programming Interface) from Python.<br>
 ・入力されたテキストを元にWAVファイルに出力<br>
 <br>
 
-# インストール方法 (gitのインストールが必要)
+# インストール方法
 ```sh
-pip install git+https://github.com/Rilm2525/sapy5
+pip install sapy5
 ```
 <br>
 
